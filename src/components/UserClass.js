@@ -36,7 +36,7 @@ class UserClass extends React.Component{
         // const {count, count2} = this.state;
         const { name , location , avatar_url } = this.state.UserInfo;
         return(
-            <div className="usercard">
+            <div className="usercard ">
             {/* <h2>Count : {count}</h2>
             <button onClick={()=>{
                 this.setState({
@@ -44,14 +44,15 @@ class UserClass extends React.Component{
                 });
             }}>Increase count</button>
             <h2>Count : {count2}</h2> */}
-            <img src={avatar_url} ></img>
-            <h2>Name: {name}</h2>
+            <img className="opacity-90 h-96 fill-pink-300 rounded-t-3xl mt-32 
+              " src={avatar_url} ></img>
+            {/* <h2>Name: {name}</h2>
             <h3>Location: {location}</h3>
-            <h4>Contact:dixitraja026@gmail.com</h4>
-             <div> 
+            <h4>Contact:dixitraja026@gmail.com</h4> */}
+             <div className="hidden"> 
                 LoggedIn User :
                 <UserContext.Consumer>
-                { ({loggedInUser})=> <span className="font-semibold">{loggedInUser}</span> }
+                { ({loggedInUser})=> <span className="font-semibold ">{loggedInUser}</span> }
                 </UserContext.Consumer>
                 </div>
 

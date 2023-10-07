@@ -17,7 +17,7 @@ const Futter = ()=>{
             <div className="col-span-2 ml-6">
                 <h1 className="text-lg text-cyan-200"> Subscribe to get more updates :</h1>
                 <form>
-                <input className="p-2 w-[78%] rounded-lg text-black" type="email" placeholder="Your email" required></input>
+                <input className="p-2 w-[78%] rounded-lg text-black" type="email" placeholder="enter email for our newsletter" required></input>
                 <button type="submit" className=" border-2 p-1 px-2 m-2 rounded-lg hover:scale-90" > Subscribe</button> </form>
                 <p > Let us savor the nourishment of life first 😋, Why waiting ? Order Now 😍  </p>
             </div>

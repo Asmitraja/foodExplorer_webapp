@@ -32,31 +32,33 @@ export const Header = () => {
           <li className="w-8 mr-5 ">
              {onlineStatus ? <img src={online}/> : ( <img src={offline}/> )}
           </li>
-          <li className="mx-3 text-2xl">
+          <li className="mx-3 text-2xl font-semibold hover:scale-105  ">
             {
-              <Link className="linkstyle" to="/">
-                Home
+              <Link className="linkstyle hover:text-sky-500 " to="/">
+                Home 
               </Link>
             }
           </li>
-          <li className="mx-3 text-2xl">
-            <Link className="linkstyle" to="/about">
+          <li className="mx-3 text-2xl font-semibold hover:scale-105">
+            <Link className="linkstyle hover:text-sky-500" to="/contactUs">
+              ContactUs
+            </Link>
+          </li>
+          <li className="px-3 text-2xl font-semibold hover:scale-105"> <Link className="hover:text-sky-500" to="/Cart"> Cart -({cartItems.length}) </Link> </li>
+          <li className="mx-3 text-2xl font-semibold hover:scale-105">
+            <Link className="linkstyle hover:text-sky-500  " to="/about">
               AboutUs
             </Link>
           </li>
-          <li className="mx-3 text-2xl">
+          <li className="mx-3 text-2xl font-semibold hover:scale-105">
             {" "}
-            <Link className=" linkstyle" to="/grocery">
+            <Link className=" linkstyle hover:text-sky-500" to="/grocery">
               {" "}
               Grocery
             </Link>
           </li>
-         <Link className="" to="/Cart"> <li className="px-3 text-2xl  ">Cart -({cartItems.length})</li> </Link>
-          <li className="mx-3 text-2xl">
-            <Link className="linkstyle" to="/contactUs">
-              ContactUs
-            </Link>
-          </li>
+        
+          
          <Link to="/signup">
           <button
             className="text-white bg-blue-700 hover:bg-blue-800 ml-2 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"

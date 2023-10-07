@@ -3,15 +3,18 @@
 import { CDN_URL } from "../utils/contants";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
+import { useState } from "react";
 
 const ItemListMenu = ({ items }) => {
   //   console.log(items);
+  const [itemincart , setItemincart ] = useState(false);
   const dispatch = useDispatch();
   const handleAddItem = (itemMenu)=>{
     // Dispatch an action
+    setItemincart(true);
     dispatch(addItem (itemMenu));
   };
-
+  
   return (
     <div>
       {items.map((itemMenu) => (
@@ -34,13 +37,16 @@ const ItemListMenu = ({ items }) => {
                 <p className=" text-xs my-3">
                   {itemMenu.card.info.description}
                 </p>
+               
               </div>
               <div className="w-[17%]">
-                <button className=" w-20 h-[40px] mr-5 rounded-lg text-green-500  bg-white absolute mt-[95px] hover:bg-blue-50"
-                onClick={()=>handleAddItem(itemMenu)} >
-                  {" "}
+                <button className=" w-20 h-[40px] mr-5 rounded-lg text-green-500  bg-white absolute mt-[95px] hover:bg-blue-50" 
+                onClick={()=> {handleAddItem(itemMenu);
+                   }  }>
+                 
                   Add +{" "}
                 </button>
+               
                 <img
                   className="w-40 rounded-md shadow-lg h-32"
                   src={CDN_URL + itemMenu.card.info.imageId}

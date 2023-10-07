@@ -151,7 +151,7 @@ const Body = () => {
 Restaurants 
         </button> </div>
           <div className="username mt-4 "> <label className="ml-3 text-lg">UserName: </label>
-        <input type="text "
+        <input type="text " maxlength="30"
             className=" border border-solid border-black bg p-1 rounded-lg "
             value={loggedInUser}
             onChange={(e)=> setUserName(e.target.value)} ></input>

@@ -30,7 +30,7 @@ const Applayout = ()=>{
     //authentication
     useEffect(()=>{
         const data = {
-            name:"Asmit Dixit",
+            name:" Hiii Asmit",
         };
         setUserName(data.name);
     },[])
@@ -40,8 +40,8 @@ const Applayout = ()=>{
         <Provider store ={appStore} > 
         <UserContext.Provider value={{loggedInUser : userName , setUserName }}>
        <div className="app">
-        <Header/>
-        <Outlet/> 
+        <Header/> 
+        <Outlet/>  
         
        </div>
        </UserContext.Provider>
